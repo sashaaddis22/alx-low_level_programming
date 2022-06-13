@@ -21,9 +21,9 @@ int main(void)
 		str[i] = randNum;
 		suma = suma + randNum;
 	}
+
 	str[i++] = 2772 - suma;
 	str[i++] = '\0';
-
 
 	printf("%s\n", str);
 
