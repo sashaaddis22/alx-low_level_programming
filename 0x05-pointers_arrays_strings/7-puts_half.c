@@ -1,24 +1,28 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-* print_array - Print a number of items in an array of integers
-* @a: The array to print
-* @n: The number of items from the array to print
-* Return: Nothing
+* puts_half - a function that prints half of a string
+* if odd len, n = (length_of_the_string - 1) / 2
+* @str: input
+* Return: half of input
 */
-void print_array(int *a, int n)
+void puts_half(char *str)
 {
-	int i;
 
-	i = 0;
-	while (i < n)
-	{
-		printf("%d", *(a + i));
-		if (i != n - 1)
-			printf(", ");
-		i++;
-	}
 
-	putchar('\n');
+	int n, m, len;
+
+	len = 0;
+
+	for (n = 0; str[n] != '\0'; n++)
+		len++;
+
+	m = (len / 2);
+
+	if ((len % 2) == 1)
+		m = ((len + 1) / 2);
+
+	for (n = m; str[n] != '\0'; n++)
+		_putchar(str[n]);
+	_putchar('\n');
 }
